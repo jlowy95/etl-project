@@ -50,6 +50,7 @@ This is our main function. It calls functions from the extract, transform, and l
 ### `config.py`
 
 This is our private/unique path and variable file.  It holds the following items as formatted:
+	
 	* path_to_chromedriver - the local and appropriate file path to 'chromedriver.exe' 
 
 
