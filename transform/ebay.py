@@ -1,2 +1,2 @@
 def clean(ebay_data):
-    return []
+    return ['foobar']

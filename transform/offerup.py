@@ -1,2 +1,2 @@
 def clean(offerup_data):
-    return []
+    return ['foobar']

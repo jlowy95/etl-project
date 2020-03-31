@@ -1,2 +1,2 @@
 def clean(craigslist_data):
-    return []
+    return ['foobar']
