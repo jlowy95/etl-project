@@ -84,4 +84,6 @@ def scrape(search_term, result_limit):
         time.sleep(randint(1,2))
 
     #pprint.pprint(listings_data)
+    browser.quit()
+
     return listings_data

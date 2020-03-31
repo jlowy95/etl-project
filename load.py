@@ -2,3 +2,9 @@
 
 def to_mongo(data):
 	pass
+	# conn = 'mongodb://localhost:27017'
+    # client = pymongo.MongoClient(conn)
+
+    # bazaarify = client.bazaarify
+
+	# bazaarify.insert_many(filtered_data)

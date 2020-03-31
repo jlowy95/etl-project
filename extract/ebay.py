@@ -12,7 +12,7 @@ def scrape(search_term, result_limit):
     
     # Initialize browser with chromedriver
     executable_path = {'executable_path': path_to_chromedriver}
-    browser = Browser('chrome', **executable_path, headless=True)
+    browser = Browser('chrome', **executable_path, headless=True, incognito=True)
     time.sleep(2)
 
     # Ebay Base URL
@@ -82,6 +82,7 @@ def scrape(search_term, result_limit):
         listings.append(listing_dict)
     #end = time.time()
     #print(end-start)
+    browser.quit()
 
     return listings
 
