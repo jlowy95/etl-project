@@ -1,1 +1,2 @@
-""" Craigslist transform functions """
+def clean(craigslist_data):
+    return []

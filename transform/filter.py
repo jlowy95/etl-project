@@ -1,1 +1,2 @@
-""" Filter functions """
+def drop_listings(cleaned_data):
+	return []

@@ -1,1 +1,2 @@
-""" Ebay transform functions """
+def clean(ebay_data):
+    return []
