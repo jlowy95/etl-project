@@ -20,7 +20,7 @@ def clean(dirty):
     '''
 
     for listing in dirty:
-        listing['title'] = listing['title'].lower()
+        listing['title'] = listing['title'][16:]
         listing['price'] = float(listing['price'][4:])
         listing['location'] = listing['location'].lower()
 

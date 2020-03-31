@@ -68,7 +68,7 @@ def scrape(search_term, result_limit):
         soup = bs(html,'lxml')
         
         url = url
-        title = soup.find('h1',{'id':'itemTitle'}).find('span').text.lower()
+        title = soup.find('h1',{'id':'itemTitle'}).text.lower()
         price = soup.find('span',{'itemprop':'price'}).text
         location = soup.find('span',{'itemprop':'availableAtOrFrom'}).text
         listing_dict = {
