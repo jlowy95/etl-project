@@ -24,6 +24,8 @@ Using MongoDB (NoSQL) because certain sites do not provide certain data on listi
 	* `filter.py`
 * `load.py`
 * `bazaarify.py`
+* `config.py` 
+	* Local only
 
 ### `notebooks/`
 
@@ -44,6 +46,11 @@ This is the load module. It contains the logic to load trasformed data into our 
 ### `bazaarify.py`
 
 This is our main function. It calls functions from the extract, transform, and load modules to perform the complete ETL process.
+
+### `config.py`
+
+This is our private/unique path and variable file.  It holds the following items as formatted:
+	* path_to_chromedriver - the local and appropriate file path to 'chromedriver.exe' 
 
 
 ## The ETL process

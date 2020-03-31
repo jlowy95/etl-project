@@ -4,12 +4,14 @@ from bs4 import BeautifulSoup as bs
 import datetime
 import time
 
+from config import path_to_chromedriver
+
 def scrape(search_term, result_limit):
     
     #start = time.time()
     
     # Initialize browser with chromedriver
-    executable_path = {'executable_path': '/usr/local/bin/chromedriver'}
+    executable_path = {'executable_path': path_to_chromedriver}
     browser = Browser('chrome', **executable_path, headless=True)
     time.sleep(2)
 
