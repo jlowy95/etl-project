@@ -1,9 +1,7 @@
 # dependencies
 
 # etl modules
-import extract.craigslist
-import extract.offerup
-import extract.ebay
+import extract
 import transform
 import load
 
