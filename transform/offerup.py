@@ -1,1 +1,2 @@
-""" Offerup transorm functions """
+def clean(offerup_data):
+    return ['foobar']

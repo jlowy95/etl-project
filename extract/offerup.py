@@ -1,2 +1,2 @@
 def scrape(search_term, result_limit):
-    pass
+    return ['foobar']
