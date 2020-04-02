@@ -27,7 +27,11 @@ def clean(dirty):
         # Remove 'Details...' from title
         listing['title'] = listing['title'][16:]
         # Remove 'US $' from price
-        listing['price'] = float(listing['price'][4:])
+        try:
+            listing['price'] = float(listing['price'][4:])
+        except ValueError:
+            # Error occurs when a price is listed with '/ea' at the end
+            listing['price'] = float(listing['price'][4:-3])
         # Convert state to abbreviation and make all fields lowercase
         location = listing['location'].split(',')
         try:

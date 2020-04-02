@@ -7,4 +7,4 @@ def to_mongo(data):
 
     # bazaarify = client.bazaarify
 
-	# bazaarify.insert_many(filtered_data)
+	# bazaarify.insert_many(data)
