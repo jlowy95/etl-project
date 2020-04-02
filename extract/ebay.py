@@ -8,7 +8,6 @@ import time
 from config import path_to_chromedriver
 
 def scrape(search_term, result_limit):
-    
     #start = time.time()
     
     # Initialize browser with chromedriver and disable console errors
