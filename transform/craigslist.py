@@ -4,6 +4,6 @@ def clean(craigslist_data):
     	listing['title'] = listing['title'].lower()
 
     	# Convert price to float
-    	listing['price'] = float(price.strip().replace("$",""))
+    	listing['price'] = float(listing['price'].strip().replace("$",""))
 
     return craigslist_data

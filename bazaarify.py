@@ -14,7 +14,7 @@ if __name__ == '__main__':
 	search_term = "skis"  
 	
 	# terms that if conained in title, listing should be ignored
-	exclusion_terms = [""]  
+	exclusion_terms = ["kilamanjaro"]  
 
 	# max number of results from each marketplace
 	result_limit = 2
@@ -41,16 +41,16 @@ if __name__ == '__main__':
 	# create a list of all cleaned data
 	cleaned_data = []
 
-	print(clean_craigslist_data)
-	print(clean_offerup_data)
-	print(clean_ebay_data)
+	# print(clean_craigslist_data)
+	# print(clean_offerup_data)
+	# print(clean_ebay_data)
 	
 	cleaned_data.extend(clean_craigslist_data)
 	cleaned_data.extend(clean_offerup_data)
 	cleaned_data.extend(clean_ebay_data)
 
 	# filter data
-	filtered_data = transform.filter.drop_listings(cleaned_data)
+	filtered_data = transform.filter.drop_listings(cleaned_data,exclusion_terms)
 
 	# ----- 4. Load: load data into mongo database ------
 
