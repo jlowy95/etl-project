@@ -11,7 +11,6 @@ def scrape(search_term, result_limit):
     browser = Browser('chrome', **executable_path, headless=True)
 
     location = "sacramento"
-    search_term = "skis"
     bundle_duplicates = 1
 
     url = f"http://www.craigslist.org/search/sss?query={search_term}&sort=rel"

@@ -11,13 +11,14 @@ if __name__ == '__main__':
 	# ----- 1. parse user input -----
 
 	# phrase to search for on each marketplace
-	search_term = "skis"  
+	search_term = input("What would you like to search for?......BEAUTIFUL: ")  
 	
 	# terms that if conained in title, listing should be ignored
-	exclusion_terms = ["kilamanjaro"]  
+	exclusion_terms = input("Are there any terms you would like to exclude (separate by commas)? ").lower().split(',')
+	exclusion_terms = [term.strip() for term in exclusion_terms]
 
 	# max number of results from each marketplace
-	result_limit = 2
+	result_limit = int(input("How many results from each site would you like? "))
 
 	# ----- 2. Extract: scrape from each site -----
 
