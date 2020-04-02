@@ -17,7 +17,7 @@ if __name__ == '__main__':
 	exclusion_terms = [""]  
 
 	# max number of results from each marketplace
-	result_limit = 10
+	result_limit = 2
 
 	# ----- 2. Extract: scrape from each site -----
 
