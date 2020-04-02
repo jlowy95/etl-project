@@ -1,7 +1,7 @@
 """ Load module: function to load json into mongo, to be called by extract scripts """
 
 def to_mongo(data):
-	pass
+	return True
 	# conn = 'mongodb://localhost:27017'
     # client = pymongo.MongoClient(conn)
 
@@ -12,5 +12,5 @@ def to_mongo(data):
 	# try:
 	# 	collection.insert_many(data)
 	# 	return True
-	# except:
-	# 	return False
+	# except as a:
+	# 	return a

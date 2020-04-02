@@ -54,7 +54,8 @@ if __name__ == '__main__':
 
 	# ----- 4. Load: load data into mongo database ------
 
-	load.to_mongo(filtered_data)
+	mongo_loaded = load.to_mongo(filtered_data)
+	print('MongoDB Load Successful!') if mongo_loaded == True else print(f'Load Failed: {mongo_loaded}')
 
 	print("I ran!")
 
