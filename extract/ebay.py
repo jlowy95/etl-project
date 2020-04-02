@@ -1,5 +1,6 @@
 from splinter import Browser
 from splinter.exceptions import ElementDoesNotExist
+from selenium.webdriver.chrome.options import Options
 from bs4 import BeautifulSoup as bs
 import datetime
 import time
@@ -10,9 +11,12 @@ def scrape(search_term, result_limit):
     
     #start = time.time()
     
-    # Initialize browser with chromedriver
+    # Initialize browser with chromedriver and disable console errors
+    chrome_options = Options()
+    chrome_options.add_argument("--log-level=3")
+    chrome_options.add_experimental_option('excludeSwitches', ['enable-logging'])
     executable_path = {'executable_path': path_to_chromedriver}
-    browser = Browser('chrome', **executable_path, headless=True, incognito=True)
+    browser = Browser('chrome', **executable_path, options=chrome_options, headless=True, incognito=True)
     time.sleep(2)
 
     # Ebay Base URL
