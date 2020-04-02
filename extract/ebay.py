@@ -8,7 +8,6 @@ import time
 from config import path_to_chromedriver
 
 def scrape(search_term, result_limit):
-    
     #start = time.time()
     
     # Initialize browser with chromedriver and disable console errors
@@ -81,7 +80,8 @@ def scrape(search_term, result_limit):
             'price': price,
             'location': location,
             'source': source,
-            'scrape_date':scrape_date
+            'scrape_date':scrape_date,
+            'search_term':search_term
         }
         listings.append(listing_dict)
     #end = time.time()

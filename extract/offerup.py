@@ -23,7 +23,6 @@ def scrape(search_term, result_limit):
     chrome_options.add_argument("--log-level=3")
     chrome_options.add_experimental_option('excludeSwitches', ['enable-logging'])
     executable_path = {'executable_path': path_to_chromedriver}
-    #executable_path = {'executable_path': 'chromedriver.exe'}
     browser = Browser('chrome', **executable_path, options=chrome_options, incognito=True,headless=True, user_agent='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36')
 
 
@@ -81,7 +80,7 @@ def scrape(search_term, result_limit):
         item_price = getattr(soup.find('span', class_='_ckr320'),'text',None)
         item_location = getattr(soup.find('a', class_='_g85abvs _133jvmu8'),'text',None)
         item_url = url
-        listings_data.append({'url': item_url,'source': item_source,'title': item_title, 'price': item_price, 'location': item_location, 'scrape_date': scrape_date})
+        listings_data.append({'url': item_url,'source': item_source,'title': item_title, 'price': item_price, 'location': item_location, 'scrape_date': scrape_date, 'search_term': searching_term})
         time.sleep(randint(1,2))
 
     #pprint.pprint(listings_data)

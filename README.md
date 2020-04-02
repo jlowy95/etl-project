@@ -81,7 +81,8 @@ Listings should be passed into transform Step 2 as a list of dictionaries where 
 	title: [listing title],  # string
 	price: [listing price],  # floating point
 	location: [city, state_code, country_code], # string
-	scrape_date: [datetime of scrape]  # datetime string
+	scrape_date: [datetime of scrape],  # datetime string
+	search_term: [search term] # string
 }
 ```
 
