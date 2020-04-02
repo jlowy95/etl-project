@@ -7,4 +7,10 @@ def to_mongo(data):
 
     # bazaarify = client.bazaarify
 
-	# bazaarify.insert_many(data)
+	# collection = bazaarify.listings
+
+	# try:
+	# 	collection.insert_many(data)
+	# 	return True
+	# except:
+	# 	return False
