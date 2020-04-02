@@ -35,6 +35,7 @@ def scrape(search_term, result_limit):
             # Create a dictionary for the item
             item_dict = {
                 "url": link,
+                "source": "craigslist"
                 "title": title,
                 "price": price,
                 "datetime": datetime,
