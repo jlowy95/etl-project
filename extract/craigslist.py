@@ -2,13 +2,17 @@ from splinter import Browser
 from splinter.exceptions import ElementDoesNotExist
 from bs4 import BeautifulSoup
 import datetime as dt
+from selenium.webdriver.chrome.options import Options
 
 from config import path_to_chromedriver
 
 
 def scrape(search_term, result_limit):
+    chrome_options = Options()
+    chrome_options.add_argument("--log-level=3")
+    chrome_options.add_experimental_option('excludeSwitches', ['enable-logging'])
     executable_path = {'executable_path': path_to_chromedriver}
-    browser = Browser('chrome', **executable_path, headless=True)
+    browser = Browser('chrome', **executable_path, options=chrome_options, incognito=True, headless=True)
 
     location = "sacramento"
     bundle_duplicates = 1
