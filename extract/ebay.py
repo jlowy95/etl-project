@@ -94,7 +94,7 @@ def scrape(search_term, result_limit):
                 price = soup.find('span',{'itemprop':'price'}).text
                 location = soup.find('span',{'itemprop':'availableAtOrFrom'}).text
             except:
-                print(f"Error at: {url}")
+                print(f"Error at: {url} /n Please report to development team.")
             listing_dict = {
                 'url': url,
                 'title': title,
