@@ -81,7 +81,8 @@ def scrape(search_term, result_limit):
             'price': price,
             'location': location,
             'source': source,
-            'scrape_date':scrape_date
+            'scrape_date':scrape_date,
+            'search_term':search_term
         }
         listings.append(listing_dict)
     #end = time.time()
