@@ -57,14 +57,13 @@ def scrape(search_term, result_limit):
     #print(f"Collecting the first {result_limit} product URLs in search results.")
     all_item_urls = soup.find_all('a', {'class':['_109rpto db-item-tile', '_109rpto _1anrh0x']})
     result_counter = 1
-    while result_counter <= result_limit:
-        for item in all_item_urls:
-            if '/item/' in item["href"]:
-                item_url = f'https://offerup.com{item["href"]}'
-                if item_url not in item_urls and result_counter <= result_limit:
-                    item_urls.append(item_url)  
-                    #print(result_counter)
-                    result_counter += 1           
+    for item in all_item_urls:
+        if '/item/' in item["href"]:
+            item_url = f'https://offerup.com{item["href"]}'
+            if item_url not in item_urls and result_counter <= result_limit:
+                item_urls.append(item_url)  
+                #print(result_counter)
+                result_counter += 1           
 
     # Visiting each listing URL and scraping listing data
     listings_data = []
@@ -77,11 +76,11 @@ def scrape(search_term, result_limit):
         html = browser.html
         soup = bs(html, 'lxml')
         item_title = getattr(soup.find('h1', class_='_t1q67t0 _1juw1gq'),'text',None)
-        item_price = getattr(soup.find('span', class_='_ckr320'),'text',None)
+        item_price = getattr(soup.find('span', class_='_ckr320'),'text','0')
         item_location = getattr(soup.find('a', class_='_g85abvs _133jvmu8'),'text',None)
         item_url = url
         listings_data.append({'url': item_url,'source': item_source,'title': item_title, 'price': item_price, 'location': item_location, 'scrape_date': scrape_date, 'search_term': searching_term})
-        time.sleep(randint(1,2))
+        #time.sleep(randint(1,2))
 
     #pprint.pprint(listings_data)
     browser.quit()
